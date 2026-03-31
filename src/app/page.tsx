@@ -1,5 +1,8 @@
 import { WaitlistForm } from "../components/WaitlistForm";
 
+const pdfDriveUrl =
+  process.env.NEXT_PUBLIC_GOOGLE_DRIVE_PDF_URL?.trim() ?? "";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#070913] text-white">
@@ -25,9 +28,48 @@ export default function Home() {
             </h1>
 
             <p className="mt-5 max-w-xl text-pretty text-lg leading-8 text-white/70">
-              Aplikacija uskoro izlazi. Upadni na listu čekanja i dobićeš rani
-              pristup, prve funkcije i najbolju šansu da izgradiš kontinuitet.
+              Aplikacija uskoro izlazi. Prijavi se za rani pristup — odmah posle
+              prijave dobijaš link ka besplatnom Dopamine Detox Protocol (PDF na
+              Google Drive).
             </p>
+
+            <div className="mt-7">
+              <div className="text-sm font-medium text-white/80">
+                Rani pristup
+              </div>
+
+              <div className="mt-4 rounded-2xl border border-emerald-400/30 bg-gradient-to-br from-emerald-500/10 to-cyan-500/5 p-4 sm:p-5">
+                <div className="text-xs font-semibold uppercase tracking-wide text-emerald-300/90">
+                  Besplatno poklon — uz prijavu
+                </div>
+                <p className="mt-2 text-sm leading-6 text-white/90">
+                  Posle prijave dobijaš link ka{" "}
+                  <span className="font-semibold text-white">
+                    Dopamine Detox Protocol
+                  </span>{" "}
+                  na Google Drive-u — praktičan PDF za reset poriva, fokusa i
+                  discipline.
+                </p>
+              </div>
+
+              <div className="mt-4">
+                <WaitlistForm
+                  locale="sr"
+                  placeholder="Unesi email"
+                  buttonLabel="Prijavi se"
+                  successTitle="Upisan si."
+                  successBody="Otvori PDF ispod. Javićemo ti i kad rani pristup bude otvoren."
+                  pdfDriveUrl={pdfDriveUrl}
+                  pdfLinkLabel="Otvori Dopamine Detox Protocol (Google Drive)"
+                  errorInvalidEmail="Unesi ispravan email."
+                  errorGeneric="Nešto nije u redu. Pokušaj ponovo."
+                />
+              </div>
+
+              <p className="mt-3 text-xs text-white/50">
+                Bez spama. Obaveštenja o lansiranju (PDF je na Google Drive-u).
+              </p>
+            </div>
 
             <p className="mt-4 max-w-xl text-pretty text-sm leading-6 text-white/60">
               Većini ljudi ne treba “još motivacije”, već sistem. Prati streak,
@@ -52,26 +94,6 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="mt-10">
-              <div className="text-sm font-medium text-white/80">
-                Rani pristup
-              </div>
-              <div className="mt-3">
-                <WaitlistForm
-                  locale="sr"
-                  placeholder="Unesi email"
-                  buttonLabel="Prijavi se"
-                  successTitle="Upisan si."
-                  successBody="Javljamo ti čim rani pristup bude otvoren."
-                  errorInvalidEmail="Unesi ispravan email."
-                  errorGeneric="Nešto nije u redu. Pokušaj ponovo."
-                />
-              </div>
-
-              <p className="mt-3 text-xs text-white/50">
-                Bez spama. Jedan email kad lansiramo (i možda par bitnih update-a).
-              </p>
-            </div>
           </div>
 
           <aside className="lg:col-span-2">

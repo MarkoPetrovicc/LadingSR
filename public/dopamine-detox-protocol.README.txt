@@ -1,0 +1,6 @@
+PDF se otvara preko Google Drive-a.
+
+U .env.local (i na Vercel-u) postavi NEXT_PUBLIC_GOOGLE_DRIVE_PDF_URL na
+link ka fajlu ili folderu. Na ekranu uspeha pojavljuje se dugme za otvaranje.
+
+PDF više ne mora da stoji u /public.

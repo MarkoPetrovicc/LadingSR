@@ -4,12 +4,16 @@ Jednostavan “waitlist” landing (srpski), spreman za Vercel.
 
 ## Podešavanje
 
-1. Kreiraj tabelu u Supabase-u pokretanjem migracija u glavnom projektu (pokreni i `007` ako si već pokrenuo `006`).
-2. U Vercel-u (ili lokalno) dodaj env varijable:
+1. Pokreni migracije: `006` i `007` (`008` je opciono ako si već dodao).
+2. Postavi PDF na **Google Drive**, podeli link (Anyone with the link).
+3. Env varijable (Vercel ili `.env.local`):
    - `SUPABASE_URL`
    - `SUPABASE_SERVICE_ROLE_KEY`
+   - `NEXT_PUBLIC_GOOGLE_DRIVE_PDF_URL` — URL ka fajlu/folderu na Drive-u
 
-Primer fajla: `.env.example`
+Primer: `.env.example`
+
+Posle prijave korisnik vidi dugme koje otvara PDF na Google Drive-u.
 
 ## Lokalno pokretanje
 
