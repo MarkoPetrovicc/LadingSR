@@ -18,6 +18,9 @@ Posle prijave korisnik vidi dugme koje otvara PDF na Google Drive-u.
 ## Lokalno pokretanje
 
 ```bash
+
+
+
 npm run dev
 ```
 
