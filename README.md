@@ -1,3 +1,26 @@
+# HabitBreaker Landing (SR)
+
+Jednostavan “waitlist” landing (srpski), spreman za Vercel.
+
+## Podešavanje
+
+1. Kreiraj tabelu u Supabase-u pokretanjem migracija u glavnom projektu (pokreni i `007` ako si već pokrenuo `006`).
+2. U Vercel-u (ili lokalno) dodaj env varijable:
+   - `SUPABASE_URL`
+   - `SUPABASE_SERVICE_ROLE_KEY`
+
+Primer fajla: `.env.example`
+
+## Lokalno pokretanje
+
+```bash
+npm run dev
+```
+
+## Gde idu prijave
+
+Supabase tabela: `public.waitlist_signups`
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
