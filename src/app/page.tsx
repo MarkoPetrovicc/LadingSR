@@ -27,11 +27,15 @@ export default function Home() {
               <div className="pointer-events-none absolute -bottom-12 -left-12 h-32 w-32 rounded-full bg-fuchsia-500/15 blur-3xl" />
 
               <div className="relative">
-                <p className="text-center text-xs font-bold uppercase tracking-[0.18em] text-cyan-300/95 sm:text-left">
-                  Doživotni besplatan pristup
+                <p className="text-center text-lg font-bold leading-snug text-white sm:text-left sm:text-xl">
+                  Besplatan pristup i to{" "}
+                  <span className="bg-gradient-to-r from-cyan-200 via-white to-cyan-100 bg-clip-text text-xl font-black tracking-wide text-transparent sm:text-2xl">
+                    DOŽIVOTNO
+                  </span>
+                  .
                 </p>
-                <p className="mt-3 text-center text-base font-semibold leading-snug text-white sm:text-left sm:text-lg">
-                  Uzmi doživotni besplatan pristup ako se prijaviš sada.
+                <p className="mt-3 text-center text-sm font-medium leading-snug text-white/80 sm:text-left sm:text-base">
+                  Prijavi se sada i osiguraj svoj pristup — bez skrivenih troškova.
                 </p>
                 <p className="mt-4 text-center text-sm leading-relaxed text-white/85 sm:text-left">
                   Kod{" "}
