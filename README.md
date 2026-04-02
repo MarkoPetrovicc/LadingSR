@@ -4,7 +4,7 @@ Jednostavan “waitlist” landing (srpski), spreman za Vercel.
 
 ## Podešavanje
 
-1. Pokreni migracije: `006` i `007` (`008` je opciono ako si već dodao).
+1. Pokreni migracije: `006`, `007`, i **`009`** (JSON `quiz_summary` za kviz). (`008` opciono.)
 2. Postavi PDF na **Google Drive**, podeli link (Anyone with the link).
 3. Env varijable (Vercel ili `.env.local`):
    - `SUPABASE_URL`

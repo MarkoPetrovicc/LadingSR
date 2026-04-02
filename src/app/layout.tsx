@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HabitBreaker — Rani pristup",
+  title: "HabitBreaker · Brza provera i rani pristup",
   description:
-    "Prijavi se za rani pristup aplikaciji HabitBreaker. 90 dana može da promeni život — uz AI mentora i podršku za streak.",
+    "Kratka provera od 2 minuta, uvid u obrasce i prijava za listu čekanja. Lansiranje sledeće nedelje. Besplatan PDF za dopamin detoks, prvi mesec besplatno za rane prijave.",
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html
       lang="sr"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full bg-[#070913] antialiased`}
       suppressHydrationWarning
     >
       <Script
@@ -41,7 +41,31 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'AW-18055944609');`}
       </Script>
-      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+      <Script id="meta-pixel" strategy="afterInteractive">
+        {`!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '871481225940898');
+fbq('track', 'PageView');`}
+      </Script>
+      <body
+        className="min-h-full flex flex-col bg-[#070913] text-white"
+        suppressHydrationWarning
+      >
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            className="hidden"
+            src="https://www.facebook.com/tr?id=871481225940898&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
         {children}
       </body>
     </html>
